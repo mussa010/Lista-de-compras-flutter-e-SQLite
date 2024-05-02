@@ -1,3 +1,4 @@
-# prova_parcial
+# Lista de Compras - Flutter e SQLite
 
-Aplicativo prova parcial
+Aplicativo de lista de compras feito com Flutter e SQLite
+
