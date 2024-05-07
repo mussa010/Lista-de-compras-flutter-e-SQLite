@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import '../model/user.dart';
 import 'package:sqflite/sqflite.dart';
 import '../database/script.dart';
