@@ -148,7 +148,7 @@ class _Login extends State<Login> {
                           if(user.getEmail() == txtUser.text && user.getPassword() == txtPassword.text) {
                             // ignore: use_build_context_synchronously
                             Navigator.pushNamed(context, 't5');
-                          } else if(user.getEmail() == '') {
+                          } else if(user.getEmail().isEmpty) {
                             // ignore: use_build_context_synchronously
                             dialogBox(context, 'Erro', 'Usuário não cadastrado');
                           } else {

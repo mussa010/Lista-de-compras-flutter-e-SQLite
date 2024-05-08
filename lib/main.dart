@@ -37,7 +37,14 @@ class MainApp extends StatelessWidget {
         't2': (context) => const AboutApp(),
         't3':(context) =>  const CreateAccount(),
         't4': (context) => const TestListView(),
-        't5' : (context) => const MenuShoppingListView()
+        't5' : (context) => const MenuShoppingListView(),
+        't6' : (context) => const MenuShoppingListView(),
+        // 't7' : (context) => const CreatShoppingList(),
+        // 't8' : (context) => const MenuItemListView(),
+        // 't9' : (context) => const CreatItemList(),
+        // 't10' : (context) => const EditItemList(),
+        // 't11' : (context) => const SearchShoppingByItem(),
+        // 't12' : (context) => const EditShoppingList(),
       }
 
     );
