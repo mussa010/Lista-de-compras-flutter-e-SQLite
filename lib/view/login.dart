@@ -138,14 +138,20 @@ class _Login extends State<Login> {
                         backgroundColor: Colors.blue,
                         foregroundColor: Colors.white,
                       ),
-                      onPressed: () {
+                      //Fazer login e ir para tela inicial do aplicativo
+                      onPressed: () async {
                         if (formKey.currentState!.validate()) {
                           //Validação com sucesso
 
                           //Continuar daqui
-                          Future<User?> user =  UserDAO().getUser(txtUser.toString());
-
-                          
+                          User user = await UserDAO().getUser(txtUser.text);
+                          if(user.getEmail() == txtUser.text && user.getPassword() == txtPassword.text) {
+                            // ignore: use_build_context_synchronously
+                            Navigator.pushNamed(context, 't5');
+                          } else {
+                            // ignore: use_build_context_synchronously
+                            dialogBox(context, 'Erro', 'Usuário ou senha incorreto');
+                          }
                         }
                       },
                       child: const Text('Login'),

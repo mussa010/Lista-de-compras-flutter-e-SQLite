@@ -19,13 +19,11 @@ class UserDAO {
     );
   }
 
-   Future<User?> getUser(String email) async {
+   Future<User> getUser(String email) async {
     final db = await Connection.get();
 
     List<Map<String, dynamic>> map = await db.query("User", where: "email = ?", whereArgs: [email]);
-    if(map.isEmpty) {
-      return null;
-    }
+    db.close();
     return User.fromJson(map[0]);
   }
 

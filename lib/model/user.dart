@@ -6,7 +6,7 @@ class User {
 
   User({required this.name, required this.email, required this.password, this.id});
 
-  String get getName {
+  String getName() {
     return name;
   }
 
@@ -14,7 +14,7 @@ class User {
     this.name = name;
   }
 
-  String get getEmail {
+  String getEmail() {
     return email;
   }
 
@@ -22,7 +22,7 @@ class User {
     this.email = email;
   }
 
-  String get getPassword {
+  String getPassword() {
     return password;
   }
 
@@ -30,7 +30,7 @@ class User {
     this.password = password;
   }
 
-  get getId {
+  int? getId() {
     return id;
   }
 
