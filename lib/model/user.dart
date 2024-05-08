@@ -15,7 +15,7 @@ class User {
   }
 
   String getEmail() {
-    return email;
+    return this.email;
   }
 
   set setEmail(String email) {
@@ -23,7 +23,7 @@ class User {
   }
 
   String getPassword() {
-    return password;
+    return this.password;
   }
 
   set setPassword(String password) {
@@ -31,19 +31,21 @@ class User {
   }
 
   int? getId() {
-    return id;
+    return this.id;
   }
 
   set setId (int id) {
     this.id = id;
   }
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
-    id: json['id'],
-    name: json['name'],
-    email: json['email'],
-    password: json['password']
-  );
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      id: json['id'],
+      name: json['name'],
+      email: json['email'],
+      password: json['password']
+    );
+  }
 
   Map<String, dynamic> toJson() => {
     'id' : id,

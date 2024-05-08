@@ -91,7 +91,7 @@ class _TestListView extends State<TestListView> {
               return ListView.builder(
                 itemCount: snapshot.data!.length,
                 itemBuilder: (BuildContext context, int index) {
-                  User item = snapshot.data![index];
+                  User user = snapshot.data![index];
                   if(Connection.isConnected() == false){
                     dialogBox(context, 'Erro', 'Falha na conexão com banco de dados');
                     Navigator.pop(context,'ok');
@@ -102,8 +102,8 @@ class _TestListView extends State<TestListView> {
 
                       leading: const Icon(Icons.person),
                       title: 
-                        Text('${item.getId}\n${item.getName}\n${item.getEmail}'),
-                      subtitle: Text('Senha: ${item.getPassword}'),
+                        Text('${user.getId()}\n${user.getName()}\n${user.getEmail()}'),
+                      subtitle: Text('Senha: ${user.getPassword()}'),
                     )
                   );
                   }

@@ -31,9 +31,10 @@ class UserDAO {
     final db = await Connection.get();
 
     final List<Map<String, dynamic>> map = await db.query("User");
-
-    List<User> allUsers = List.generate(map.length, (index) => User.fromJson(map[index]));
-
+    List<User> allUsers = [];
+    for(int i = 0; i < map.length; i++) {
+      allUsers.add(User.fromJson(map[i]));
+    }
     return allUsers;
   }
 
